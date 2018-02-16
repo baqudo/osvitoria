@@ -1,0 +1,722 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@@title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- @endif -->
+</head>
+<body class="">
+	<script>
+	//for preloader
+	//document.body.classList.add("overflow-hidden");
+	function getScrollbarWidth() {
+	var outer = document.createElement("div");
+	outer.style.visibility = "hidden";
+	outer.style.width = "100px";
+	outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+	document.body.appendChild(outer);
+
+	var widthNoScroll = outer.offsetWidth;
+	// force scrollbars
+	outer.style.overflow = "scroll";
+
+	// add innerdiv
+	var inner = document.createElement("div");
+	inner.style.width = "100%";
+	outer.appendChild(inner);        
+
+	var widthWithScroll = inner.offsetWidth;
+
+	// remove divs
+	outer.parentNode.removeChild(outer);
+
+	return widthNoScroll - widthWithScroll;
+	}
+	var scrollW = getScrollbarWidth();
+	document.body.style.paddingRight = scrollW + 'px';
+	document.body.className = "overflow-hidden";
+</script>
+
+
+<div id="preloader">
+	<div class="preloader-wrapper big active">
+	<div class="spinner-layer">
+	  <div class="circle-clipper left">
+		<div class="circle"></div>
+	  </div><div class="gap-patch">
+		<div class="circle"></div>
+	  </div><div class="circle-clipper right">
+		<div class="circle"></div>
+	  </div>
+	</div>
+  </div>
+</div>
+	<div style="height: 0; width: 0; position: absolute;overflow: hidden;" id="svg-sprite-container">
+ 		
+ 	</div> 
+
+    <div class="wrapper">
+    	
+    	<header class="header wow fadeInDown js-header header--index" data-wow-delay="1.2s" data-wow-duration="1s">
+	<div class="container">
+		
+		<div class="header__top wow fadeInUp" data-wow-delay="2.2s">
+			<div class="header__top-left"><a href="#" class="header__top-link"> info@osvitoria.org</a></div>
+			<div class="header__top-right">
+				<div class="header__lang">
+					<span class="header__lang-open js-header-lang-open">Укр<span class="hide">аїнська</span></span>
+					<ul class="header__lang-drop js-header-lang-drop">
+						<li class="header__lang-drop-item">
+							<a href="#" class="header__lang-drop-link">Eng<span class="hide">lish</span></a>
+						</li>
+					</ul> 
+				</div>
+				<div class="header__social">
+					<a href="https://www.facebook.com/osvitoria.media/" class="header__social-link">
+						<svg class="icon-facebook">
+							<use xlink:href="#facebook"></use>
+						</svg>
+					</a>
+					<a href="https://www.youtube.com/channel/UCz3iBih-MsBlBvhIgkHuRzQ/videos?sort=dd&view=0&shelf_id=0" class="header__social-link">
+						<svg class="icon-youtube">
+							<use xlink:href="#youtube"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__panel">
+			<div class="header__burger js-open-nav">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+			<div class="header__logo-box">
+				<a href="#" class="header__logo">
+					<svg class="icon-logo">
+						<use xlink:href="#logo"></use>
+					</svg>
+				</a> 
+			</div>
+			<div class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="2.2s">
+						<a href="#" class="header__nav-link ">Про нас</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="2.3s">
+						<a href="#" class="header__nav-link">Новини</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="2.4s">
+						<a href="#" class="header__nav-link ">Проекти</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="2.5s">
+						<a href="#" class="header__nav-link">Експертна рада</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="2.6s">
+						<a href="#contacts" class="header__nav-link js-scroll-to">Контакти</a>
+					</li>
+				</ul>
+			</div> 
+			<a href="#popup3" class="header__support-link" data-fancybox>підтримати нас</a>
+		</div>
+	</div>
+</header>
+<a href="#" class="like-link" data-fancybox data-src="#popup3">
+	<svg class="icon-like">
+		<use xlink:href="#like"></use>
+	</svg>
+</a>		
+   	
+   		<div class="main-screen js-main-scr-slider" data-delay="4">
+	<!-- <div class="main-screen__item wow fadeInDownBig" data-wow-duration="1.2s" style="background-image: url(./pic/main-screen/main-screen.jpg)"> -->
+	<div class="main-screen__item main-screen__item--slide-down js-slide-down-anim" style="background-image: url(./pic/main-screen/main-screen.jpg)">
+		<div class="main-screen__caption js-main-scr-slider-inner">
+			<div class="container">
+				<span class="main-screen__title wow fadeInLeft" data-wow-delay="1.4s">Global Teacher Prize</span>
+				<span class="main-screen__descr wow fadeInLeft" data-wow-delay="1.8s">Це світовий конкурс учителів, які зробили видатний внесок у професію. Премія, яка підкреслює важливість педагогів і той факт, що в усьому світі їх зусилля варті того, аби бути визнаними. </span>
+				<a href="#" data-wow-delay="2.2s" class="btn btn--transparent btn--arrow btn--inline wow fadeInLeft">детальніше<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+			</div>
+		</div>
+	</div>
+	<div class="main-screen__item" style="background-image: url(./pic/main-screen/main-screen.jpg)">
+		<div class="main-screen__caption js-main-scr-slider-inner">
+			<div class="container">
+				<span class="main-screen__title">Global Teacher Prize</span>
+				<span class="main-screen__descr">Це світовий конкурс учителів, які зробили видатний внесок у професію. Премія, яка підкреслює важливість педагогів і той факт, що в усьому світі їх зусилля варті того, аби бути визнаними. </span>
+				<a href="#" class="btn btn--transparent btn--arrow btn--inline">детальніше<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+			</div>
+		</div>
+	</div>
+	<div class="main-screen__item" style="background-image: url(./pic/main-screen/main-screen.jpg)">
+		<div class="main-screen__caption js-main-scr-slider-inner">
+			<div class="container">
+				<span class="main-screen__title">Global Teacher Prize</span>
+				<span class="main-screen__descr">Це світовий конкурс учителів, які зробили видатний внесок у професію. Премія, яка підкреслює важливість педагогів і той факт, що в усьому світі їх зусилля варті того, аби бути визнаними. </span>
+				<a href="#" class="btn btn--transparent btn--arrow btn--inline">детальніше<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+			</div>
+		</div>
+	</div>
+</div>
+   		
+   		<div class="content js-content">
+   			
+   			
+   			<section class="about-us">
+	<div class="container">
+		<span class="content-title wow fadeInLeft">Про нас</span>
+		<span class="about-us__descr wow fadeInLeft">Освіторія — це неприбуткова громадська спілка, яка допомагає змінювати і розвивати освіту в Україні. Ми створюємо інноваційні школи і програми, допомагаємо вчителям навчатись та надаємо доступ до якісної та сучасної освіти малозабезпеченим дітям. Ми прагнемо підняти українську освіту на міжнародний рівень та створити можливості для навчання дітей за передовими міжнародними стандартами.</p>
+		<a href="#" class="link-arrow wow fadeInLeft">Дізнатися більше<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+	</div>
+</section>
+   			
+   			<section class="directions">
+	<div class="container">
+		<span class="content-title wow fadeInLeft">Напрямки роботи</span>
+		<ul class="directions__list">
+			<li class="directions__list-item">
+				<div class="directions__list-block">
+					<span class="directions__list-icon directions__list-icon--yellow wow fadeInUp">
+						<svg class="icon-direct1 wow zoomIn" data-wow-delay=".3s">
+							<use xlink:href="#direct1"></use>
+						</svg>
+					</span>
+					<span class="directions__list-title wow fadeInLeft">Створення інноваційних <span>закладів освіти</span></span>
+					<span class="directions__list-descr wow fadeInLeft" data-wow-delay=".3s">Ми створюємо найкращі школи і платформи, які допомагають реформувати систему освіти в Україні.</span>
+				</div>
+			</li>
+			<li class="directions__list-item">
+				<div class="directions__list-block">
+					<span class="directions__list-icon directions__list-icon--blue wow fadeInUp">
+						<svg class="icon-direct2 wow zoomIn" data-wow-delay=".6s">
+							<use xlink:href="#direct2"></use>
+						</svg>
+					</span>
+					<span class="directions__list-title wow fadeInLeft" data-wow-delay=".3s">Розвиток <span>вчителів</span></span>
+					<span class="directions__list-descr wow fadeInLeft" data-wow-delay=".6s">Доводимо, що вчителі важливіі надихаємо освітян на великі звершення заради маленьких людей, які творитимуть майбутнє України і світу.</span>
+				</div>
+			</li>
+			<li class="directions__list-item">
+				<div class="directions__list-block">
+					<span class="directions__list-icon directions__list-icon--green wow fadeInUp">
+						<svg class="icon-direct3 wow zoomIn" data-wow-delay=".9s">
+							<use xlink:href="#direct3"></use>
+						</svg>
+					</span>
+					<span class="directions__list-title wow fadeInLeft" data-wow-delay=".9s">Надання доступу <span>до освіти</span></span>
+					<span class="directions__list-descr wow fadeInLeft" data-wow-delay="1.2s">Ми прагнемо, щоб якісна освіта була доступна кожному, щоб діти мали можливість навчатися, мріяли і вірили</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+   			
+   			<section class="projects">
+	<div class="container">
+		<span class="content-title wow fadeInLeft">Проекти</span>
+		
+		<div class="projects__right">
+			<div class="projects__pic-slider js-projects-pic-slider">
+				<div class="projects__pic-slider-item wow fadeInRight">
+					<img src="pic/projects/projects-1.jpg" alt="">
+				</div>
+				<div class="projects__pic-slider-item wow fadeInRight" data-wow-delay=".3s">
+					<img src="pic/projects/projects-2.jpg" alt="">
+				</div>
+				<div class="projects__pic-slider-item">
+					<img src="pic/projects/projects-1.jpg" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="projects__left">
+			<div class="projects__descr-slider js-projects-descr-slider">
+				<div class="projects__descr-slider-item">
+					<span class="projects__descr-slider-title wow fadeInLeft">Новопечерська школа</span>
+					<span class="projects__descr-slider-info wow fadeInLeft" data-wow-delay=".3s">Це сучасна українська школа з глобальним мисленням і українським серцем. Ми створили цю школу в 2014 році як пілот для подальшої реформи усієї системи середньої освіти в Україні.</span>
+					<a href="#" class="btn btn--inline wow fadeInLeft" data-wow-delay=".6s">більше про проект</a>
+				</div>
+				<div class="projects__descr-slider-item">
+					<span class="projects__descr-slider-title">Lorem ipsum dolor.</span>
+					<span class="projects__descr-slider-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio minus aliquam praesentium iure numquam nesciunt omnis tempora ut, fugit id sequi dolor suscipit vitae excepturi. Ratione voluptate eveniet quod fugiat.</span>
+					<a href="#" class="btn btn--inline">більше про проект</a>
+				</div>
+				<div class="projects__descr-slider-item">
+					<span class="projects__descr-slider-title">Lorem ipsum dolor sit.</span>
+					<span class="projects__descr-slider-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi doloremque pariatur, ipsum dolor aut vel, deleniti adipisci quis iusto itaque, ab quo, eaque!</span>
+					<a href="#" class="btn btn--inline">більше про проект</a>
+				</div>
+			</div>
+			<div class="projects__sliders-controls js-projects-sliders-controls"></div>
+		</div>
+	</div>
+</section>
+   			
+   			<section class="good">
+	<div class="container">
+		<span class="content-title">Мапа добрих справ</span>
+		<div class="good-map__wrapper js-good-map-wrap">
+			<frame seamless width="100%" height="600" align="left">
+<!-- 				<html>
+					<head>
+						<meta charset="utf-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1">
+					</head>
+					<body>   -->
+
+						<div class="good-map js-good-map" id="scale-element">
+						<span class="good-map__pin" style="top:12%;left:14%">
+							Люблинець
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:14%;left:20%">
+							Володимир-Волинський
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:12%;left:27.5%">
+							Рафалівка
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:24%;left:15%">
+							Княгининок
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:30%;left:9%">
+							Рава-Руська
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:48%;left:4%">
+							Великий березний
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span> 
+						<span class="good-map__pin" style="top:35%;left:15%">
+							Хирів
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:47%;left:19%">
+							Нижні <br>Ворота
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:30%;left:21%">
+							Клевань
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:27%;left:25.5%">
+							Рівне
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:25%;left:31%">
+							Житомир 
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:20%;left:36%">
+							Кмитів
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:31%;left:36.5%">
+							Велико-половецьке
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:47%;left:32%">
+							Самгородок
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:37%;left:43%">
+							Володарка
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:27%;left:55%">
+							Стара Басань
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:55%;left:52%">
+							Добровеличківка
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin" style="top:38%;left:82%">
+							Святогірськ
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						<span class="good-map__pin good-map__pin--capital" style="top:25%;left:45%">
+							Київ
+							<span class="good-map__pin-drop">Швейний гуртоку Кмитівському сиротинці</span>
+						</span>
+						</div>
+		<!-- 			</body>
+				</html>
+ -->
+
+			</frame>
+		</div>
+	</div>
+</section>
+   			
+   			<section class="team">
+	<div class="container">
+		<span class="content-title">Команда</span>
+		<div class="team-slider js-team-slider">
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img wow fadeInRight">
+						<img src="pic/team/team-4.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-4@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title wow fadeInLeft">Зоя Литвин</span>
+						<span class="team-box__descr wow fadeInLeft">Голова громадської спілки «Освіторія»</span>
+					</div>
+				</div>
+			</div>
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img wow fadeInRight" data-wow-delay=".4s">
+						<img src="pic/team/team-1.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-1@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title wow fadeInLeft" data-wow-delay=".5s">Анна Сидорук</span>
+						<span class="team-box__descr wow fadeInLeft" data-wow-delay=".6s">Керівник благодійних проектів та благодійних програм ГС "Освіторія"</span>
+					</div>
+				</div>
+			</div>
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img wow fadeInRight" data-wow-delay=".8s">
+						<img src="pic/team/team-5.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-5@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title wow fadeInLeft" data-wow-delay=".9s">Ірина Плешакова</span>
+						<span class="team-box__descr wow fadeInLeft" data-wow-delay="1s">Менеджер благодійних проектів і програм ГС "Освіторія"</span>
+					</div>
+				</div>
+			</div>
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img wow fadeInRight" data-wow-delay="1.2s">
+						<img src="pic/team/team-6.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-6@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title wow fadeInLeft" data-wow-delay="1.3s">Олена Северенчук</span>
+						<span class="team-box__descr wow fadeInLeft" data-wow-delay="1.4s">Займається набором, адаптацією та навчанням персоналу</span>
+					</div>
+				</div>
+			</div>
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img">
+						<img src="pic/team/team-2.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-2@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title">Антон Онуфрієнко</span>
+						<span class="team-box__descr">Lorem ipsum dolor sit amet, consectetur.</span>
+					</div>
+				</div>
+			</div>
+			<div class="team-slider__item">
+				<div class="team-box js-team-box">
+					<div class="team-box__img">
+						<img src="pic/team/team-3.jpg" class="team-box__img-def" alt="">
+						<img src="pic/team/team-3@mod.jpg" class="team-box__img-mod" alt="">
+					</div>
+					<div class="team-box__caption">
+						<span class="team-box__title">Валерія Іжик</span>
+						<span class="team-box__descr">Lorem ipsum dolor sit amet, consectetur adipisicing.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="team-slider__controls js-team-slider-controls"></div>
+	</div>
+</section>
+   			
+   			<section class="news">
+	<div class="container">
+		<span class="content-title">Новини</span>
+		<ul class="news__list">
+			<li class="news__list-item">
+				<div class="news-block">
+					<div class="news-block__img wow fadeInLeft">
+						<img src="pic/news/news.jpg" alt="">
+					</div>
+					<span class="news-block__date wow fadeInLeft" data-wow-delay=".3s">О. Северинчук /  17 вересня 2017 </span>
+					<span class="news-block__title wow fadeInLeft" data-wow-delay=".6s">Вчитель давно не є носієм цінних та нікому більше не відомих знань</span>
+					<span class="news-block__descr wow fadeInLeft" data-wow-delay=".9s">Сучасні школярі абсолютно всім відрізняються від тих, що були, наприклад, 20 років тому, до цифрової революції. І дорослим нарешті потрібно це збагнути.</span>
+					<a href="#" class="link-arrow wow fadeInLeft" data-wow-delay="1.2s">Читати далі<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+				</div>
+			</li>
+			<li class="news__list-item">
+				<div class="news-block">
+					<div class="news-block__img wow fadeInRight">
+						<img src="pic/news/news.jpg" alt="">
+					</div>
+					<span class="news-block__date wow fadeInRight" data-wow-delay=".3s">О. Северинчук /  17 вересня 2017 </span>
+					<span class="news-block__title wow fadeInRight" data-wow-delay=".6s">Вчитель давно не є носієм цінних та нікому більше не відомих знань</span>
+					<span class="news-block__descr wow fadeInRight" data-wow-delay=".9s">Сучасні школярі абсолютно всім відрізняються від тих, що були, наприклад, 20 років тому, до цифрової революції. І дорослим нарешті потрібно це збагнути.</span>
+					<a href="#" class="link-arrow wow fadeInRight" data-wow-delay="1.2s">Читати далі<svg class="icon-arrow"><use xlink:href="#arrow"></use></svg></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+   			
+   			<section class="partners">
+	<div class="container">
+		<span class="content-title wow fadeInLeft">Партнери</span>
+		<ul class="partners__list js-partners-list">
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-1.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".1s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-2.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".2s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-3.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".3s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-4.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".4s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-5.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".5s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-6.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".6s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-7.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".7s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-8.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".8s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-9.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay=".9s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-10.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="1s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-11.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="1.1s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-12.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="1.2s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-13.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="1.3s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-14.png" alt="">
+				</div>
+			</li>
+			<li class="partners__list-item wow fadeInRight" data-wow-delay="1.4s">
+				<div class="partners__list-link">
+					<img src="pic/partner/partner-15.png" alt="">
+				</div>
+			</li>
+		</ul>
+		<span class="partners__bottom">
+			<a href="#" style="display: none" class="partners__load-link wow fadeInLeft" data-wow-delay="1.7s"><svg class="icon-loading"><use xlink:href="#loading"></use></svg>Дивитись все</a>
+		</span>
+	</div>  
+</section>
+   			
+   			<section class="contacts" id="contacts">
+	<div class="contacts__left">
+		<div class="contacts__form">
+			<form action="#" class="js-contact-form">
+				<span class="contacts__form-subtitle">зв’яжіться з нами</span>
+				<span class="contacts__form-title">Маєте запитання або пропозицію щодо співпраці? Ми завжди вам раді і залюбки відповімо!</span>
+				<div class="contacts__form-emailbox">
+					<input type="email" placeholder="Ваша електронна адреса" class="error contacts__form-input">
+				</div>
+				<div class="contacts__form-inputbox">
+					<input type="text" placeholder="Тема" class="contacts__form-input">
+				</div>
+				<div class="contacts__form-textbox">
+					<textarea placeholder="Ваше повідомлення" class="contacts__form-input"></textarea>
+				</div>
+				<button class="btn btn--white btn--inline" data-fancybox data-src="#popup1">надіслати</button>
+			</form>
+		</div>
+	</div> 
+	<div class="contacts__right">
+		<div class="contacts__map" id="js-contact-map" data-lat="50.410044" data-lng="30.546623"></div>
+	</div>
+	
+</section>
+   			
+   			<div class="scene-container js-scene-container scene-container--visible">
+  <div class="scene-container__inner">
+    <ul class="scene js-scene">
+      
+        <li class="layer layer-figure layer-figure1" data-depth="0.10">
+  <svg class='icon-decor1'><use xlink:href='#decor1'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure2" data-depth="0.20">
+  <svg class='icon-decor2'><use xlink:href='#decor2'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure3" data-depth="0.10">
+  <svg class='icon-decor3'><use xlink:href='#decor3'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure4" data-depth="0.20">
+  <svg class='icon-decor4'><use xlink:href='#decor4'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure5" data-depth="0.10">
+  <svg class='icon-decor5'><use xlink:href='#decor5'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure6" data-depth="0.20">
+  <svg class='icon-decor7'><use xlink:href='#decor7'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure7" data-depth="0.10">
+  <svg class='icon-decor8'><use xlink:href='#decor8'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure8" data-depth="0.20">
+  <svg class='icon-decor9'><use xlink:href='#decor9'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure9" data-depth="0.10">
+  <svg class='icon-decor10'><use xlink:href='#decor10'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure10" data-depth="0.20">
+  <svg class='icon-decor11'><use xlink:href='#decor11'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure11" data-depth="0.10">
+  <svg class='icon-decor12'><use xlink:href='#decor12'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure12" data-depth="0.20">
+  <svg class='icon-decor13'><use xlink:href='#decor13'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure13" data-depth="0.10">
+  <svg class='icon-decor14'><use xlink:href='#decor14'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure14" data-depth="0.10">
+  <svg class='icon-decor15'><use xlink:href='#decor15'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure15" data-depth="0.10">
+  <svg class='icon-decor6'><use xlink:href='#decor6'></use></svg>
+</li>
+      
+    </ul>
+  </div>
+</div>
+   		</div>
+    	
+    </div>
+
+  <a href="#" class="go-top js-go-top">
+	<svg class="icon-arrow-top">
+		<use xlink:href="#arrow"></use>
+	</svg>
+</a>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<span class="footer__inner-cell footer__copyright">© 2017 <a href="#">Освіторія</a></span>
+			<div class="footer__inner-cell">
+				<a href="#" class="footer__logo"><svg class="icon-logo-footer"><use xlink:href="#logo-footer"></use></svg></a>
+			</div>
+			<ul class="footer__inner-cell footer__social">
+				<a href="https://www.facebook.com/osvitoria.media/" class="footer__social-link">
+					<svg class="icon-facebook">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+				<a href="https://www.youtube.com/channel/UCz3iBih-MsBlBvhIgkHuRzQ/videos?sort=dd&view=0&shelf_id=0" class="footer__social-link">
+					<svg class="icon-youtube">
+						<use xlink:href="#youtube"></use>
+					</svg>
+				</a>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<div class="popup" id="popup1">
+	<div class="popup__caption">
+		<span class="popup__icon">
+			<svg class="icon-checked">
+				<use xlink:href="#checked"></use>
+			</svg>
+		</span>
+		<span class="popup__title">Дякуємо вам за звернення!</span>
+		<span class="popup__descr">Найближчим часом ми вам відповімо.</span>
+	</div>
+</div>
+<div class="popup" id="popup2">
+	<div class="popup__caption">
+		<span class="popup__icon">
+			<svg class="icon-checked">
+				<use xlink:href="#checked"></use>
+			</svg>
+		</span>
+		<span class="popup__title">Дякуємо вам за підтримку!</span>
+	</div>
+</div>
+<div class="popup" id="popup3">
+	<div class="popup__caption">
+		<span class="popup__title">Підтримати нас</span>
+		<span class="popup__descr">Маєте бажання підтримати Освіторію та допомогти нам й надалі продовжувати розвиток та реформування освіти в Україні? Натисніть кнопку, що знаходиться нижче і дотримуйтесь подальших інструкцій. Дякуємо!</span>
+		<a href="#" class="btn btn--inline" data-fancybox data-src="#popup2">підтримати</a>
+	</div>
+</div>
+		
+
+    <script src="js/vendor.js"></script>
+
+    
+    
+    <script src="js/main.js"></script>
+
+
+    
+
+    
+</body>
+</html>
+
+

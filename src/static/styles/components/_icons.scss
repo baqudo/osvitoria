@@ -1,0 +1,133 @@
+.icon {
+	&-logo {
+		width: 166px;
+		height: 34px;
+		@include b(mobile) {
+			width: 140px;
+			height: 32px;
+		}
+	}
+	&-facebook {
+		width: 10px;
+		height: 18px;
+	}
+	&-youtube {
+		width: 20px;
+		height: 13px;
+	}
+	&-arrow,
+	&-arrow-left {
+	
+		width: 18px;
+		height: 8px;
+	}
+	&-arrow-left {
+		transform: scale(-1, 1);
+	}
+	
+	&-arrow-top {
+		width: 26px;
+		height: 12px;
+		transform: rotate(-90deg);
+	}
+	&-direct1 {
+		width: 67px;
+		height: 67px;
+		@include b(desktop-lg) {
+			width: 50px;
+			height: 50px;
+		}
+		
+	}
+	&-direct2, 
+	&-direct3 {
+		width: 70px;
+		height: 70px;
+	}
+	&-direct2 {
+		@include b(desktop-lg) {
+			width: 54px;
+			height: 54px;
+		}
+	}
+	&-direct3 {
+		@include b(desktop-lg) {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	&-loading {
+		width: 29px;
+		height: 29px;
+	}
+	&-logo-footer {
+		width: 40px;
+		height: 40px;
+	}
+	&-decor2 {
+		fill:#ffb607; 
+	}
+	&-decor3 {
+		fill: #ffb607;
+	}
+	&-decor4 {
+		fill: #08b3ff;
+	}
+	&-decor5 {
+		fill: #3aaa35;
+	}
+	&-decor7 {
+		fill: #ffb607;
+	}
+	&-decor8 {
+		fill: #08b3ff;
+	}
+	&-decor9 {
+		fill: #3aaa35;
+	}
+	&-decor10 {
+		fill: #08b3ff;
+	}
+	&-decor11 {
+		fill: #3aaa35;
+	}
+	&-decor12 {
+		fill: #08b3ff;
+	}
+	&-decor13 {
+		fill: #3aaa35;
+	}
+	&-decor14 {
+		fill: #3aaa35;
+	}
+	&-decor15 {
+		fill: #3aaa35; 
+	}
+	&-decor6 {
+		fill: #08b3ff;
+	}
+	&-checked {
+		width: 54px;
+		height: 39px;
+	}
+	&-discussion {
+		width: 68px;
+		height: 68px;
+	}
+	&-chef {
+		width: 53px;
+		height: 63px;
+	}
+	&-webcam {
+		width: 54px;
+		height: 65px;
+	}
+	&-student {
+		width: 70px;
+		height: 66px;
+	}
+	&-like {
+		width: 16px;
+		height: 16px;
+	}
+}

@@ -1,0 +1,102 @@
+@@include('src/modules/head/head.html') 
+
+    <div class="wrapper">
+    	
+    	@@include('src/modules/header/header-inner.html', {
+    		"about_page": "true"
+    	})
+   		
+   		<div class="content--page">
+   		
+   			@@include('src/modules/about-us/about-us-page.html')
+   			
+   			@@include('src/modules/contacts/contacts.html')
+   			
+   			@@include('src/modules/scene/scene.html',{
+			  "mod": "scene-container--visible",
+			  "arr":[
+				{
+				"tag": "<svg class='icon-decor1'><use xlink:href='#decor1'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure1"
+				},
+				{
+				"tag": "<svg class='icon-decor2'><use xlink:href='#decor2'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure2"
+				},
+				{
+				"tag": "<svg class='icon-decor3'><use xlink:href='#decor3'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure3"
+				},
+				{
+				"tag": "<svg class='icon-decor4'><use xlink:href='#decor4'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure4"
+				},
+				{ 
+				"tag": "<svg class='icon-decor5'><use xlink:href='#decor5'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure5"
+				},
+				{
+				"tag": "<svg class='icon-decor7'><use xlink:href='#decor7'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure6"
+				},
+				{
+				"tag": "<svg class='icon-decor8'><use xlink:href='#decor8'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure7" 
+				},
+				{
+				"tag": "<svg class='icon-decor9'><use xlink:href='#decor9'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure8"
+				},
+				{
+				"tag": "<svg class='icon-decor10'><use xlink:href='#decor10'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure9"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor11'><use xlink:href='#decor11'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure10"
+				}, 
+				{
+				"tag": "<svg class='icon-decor12'><use xlink:href='#decor12'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure11"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor13'><use xlink:href='#decor13'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure12"
+				},
+				{ 
+				"tag": "<svg class='icon-decor14'><use xlink:href='#decor14'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure13"
+				},
+				{
+				"tag": "<svg class='icon-decor15'><use xlink:href='#decor15'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure14"
+				},
+				{
+				"tag": "<svg class='icon-decor6'><use xlink:href='#decor6'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure15"
+				}
+			  ]
+			})
+   		</div>
+    	
+    </div>
+
+  @@include('src/modules/footer/footer.html')
+@@include('src/modules/popups/popups.html')
+@@include('src/modules/foot/foot.html')
+

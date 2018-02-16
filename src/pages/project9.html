@@ -1,0 +1,200 @@
+@@include('src/modules/head/head.html') 
+
+    <div class="wrapper">
+    	
+    	@@include('src/modules/header/header-inner.html')
+   		
+   		<div class="content--page">
+   			<div class="container">
+   				<span class="page-title">Програма розвитку соціально-незахищенної молоді</span>
+   			</div>
+   			<div class="container container--mod">
+   				<p>Це комплексна програма підтримки дітей зі шкіл-інтернатів, яку реалізуємо спільно з компанією Coca-Cola. Ми допомагаємо дітям обрати майбутню професію, заохочуємо їх до навчання, вчимо їх мріяти, оцінювати свої можливості та вірити у себе.</p>
+   				<ul class="project-info__list">
+   					<li class="project-info__list-item">
+   						<span class="project-info__count project-info__count--orange">7</span>
+   						<span class="project-info__descr">областей України</span>
+   					</li>
+   					<li class="project-info__list-item">
+   						<span class="project-info__count project-info__count--green">15</span>
+   						<span class="project-info__descr">інтернатів</span>
+   					</li>
+   					<li class="project-info__list-item">
+   						<span class="project-info__count project-info__count--blue">1054</span>
+   						<span class="project-info__descr">вихованців інтернатів – учасники програми</span>
+   					</li>
+   				</ul>
+   				
+   				<p>Діти з інтернатів живуть в закритих умовах. Вони не знають, що на них чекає після закінчення школи, як жити без підтримки держави і не вірять в свої сили. Тому ми проводимо дітям мотиваційні тренінги про навчання, можливості, ресурси і професії. Робимо тести з профорієнтації і допомагаємо дітям визначитись із майбутньою професією та вишем. Також разом із нашим партнером компанією Coca-Cola ми відкриваємо в інтернатах комп’ютерні класи - це дозволяє працювати з дітьми онлайн і підключати їх до нашої програми iLearn.</p>
+   				
+   				<ul class="advant-list">
+   					<li class="advant-list__item">
+   						<span class="directions__list-icon directions__list-icon--green">
+   							<svg class="icon-student">
+								<use xlink:href="#student"></use>
+							</svg>
+   						</span>
+   						<span class="directions__list-title">Онлайн підготовка до ЗНО</span>
+   					</li>
+   					<li class="advant-list__item">
+   						<span class="directions__list-icon directions__list-icon--blue">
+   							<svg class="icon-webcam">
+								<use xlink:href="#webcam"></use>
+							</svg>
+   						</span>
+   						<span class="directions__list-title">Вебінари</span>
+   					</li>
+   					<li class="advant-list__item">
+   						<span class="directions__list-icon directions__list-icon--yellow">
+   							<svg class="icon-chef">
+								<use xlink:href="#chef"></use>
+							</svg>
+   						</span>
+   						<span class="directions__list-title">Програма профорієнтації</span>
+   					</li>
+   					<li class="advant-list__item">
+   						<span class="directions__list-icon directions__list-icon--green">
+   							<svg class="icon-discussion">
+								<use xlink:href="#discussion"></use>
+							</svg>
+   						</span>
+   						<span class="directions__list-title">Професійні гуртки</span>
+   					</li>
+   				</ul>
+   				<div class="project-pic-slider js-slider-pics">
+   					<div class="project-pic-slider__item">
+						<img src="pic/projects/projects-13.jpg" alt="">
+					</div>
+					<div class="project-pic-slider__item">
+						<img src="pic/projects/projects-1.jpg" alt="">
+					</div>
+					<div class="project-pic-slider__item">
+						<img src="pic/projects/projects-2.jpg" alt="">
+					</div>
+					<div class="project-pic-slider__item">
+						<img src="pic/projects/projects-3.jpg" alt="">
+					</div>
+				</div>
+  				<p class="project-pic-slider__descr">Це проект про мрію та її досягнення, про виклики, які діти ставлять самі собі. Колись наші перші підопічні діти з цієї програми боялися вступати в найближчий до свого населеного пункту технікум, а зараз вони навчаються в найкраших ВНЗ країни і попереду в них чимало звершень. А ще на них дивляться молодші діти, які вже знають, що все можливо для тих, хто ставить цілі і досягає їх завдяки навчанню і праці.</p>
+   			</div>
+   			
+   			<div class="other-projects"> 
+   				<div class="container">
+   					<span class="other-projects__title">Інші проекти:</span>
+					<div class="other-projects__list">
+						<div class="other-projects__item">
+							<a href="#" class="other-project">
+								<img src="pic/projects/projects-3.jpg" alt="">
+								<span class="other-project__text">Global Teacher Prize</span>
+							</a>
+
+						</div>
+						<div class="other-projects__item">
+							<a href="#" class="other-project">
+								<img src="pic/projects/projects-5.jpg" alt="">
+								<span class="other-project__text">Освіторія медіа</span>
+							</a>
+
+						</div>
+						<div class="other-projects__item">
+							<a href="#" class="other-project">
+								<img src="pic/projects/projects-8.jpg" alt="">
+								<span class="other-project__text">Тренінговий центр</span>
+							</a>
+
+						</div>
+					</div>
+   				</div>
+   			</div>
+   			
+   			
+   			@@include('src/modules/contacts/contacts.html')
+   			
+   			@@include('src/modules/scene/scene.html',{
+			  "mod": "scene-container--visible",
+			  "arr":[
+				{
+				"tag": "<svg class='icon-decor1'><use xlink:href='#decor1'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure1"
+				},
+				{
+				"tag": "<svg class='icon-decor2'><use xlink:href='#decor2'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure2"
+				},
+				{
+				"tag": "<svg class='icon-decor3'><use xlink:href='#decor3'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure3"
+				},
+				{
+				"tag": "<svg class='icon-decor4'><use xlink:href='#decor4'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure4"
+				},
+				{ 
+				"tag": "<svg class='icon-decor5'><use xlink:href='#decor5'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure5" 
+				},
+				{
+				"tag": "<svg class='icon-decor7'><use xlink:href='#decor7'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure6"
+				},
+				{
+				"tag": "<svg class='icon-decor8'><use xlink:href='#decor8'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure7" 
+				},
+				{
+				"tag": "<svg class='icon-decor9'><use xlink:href='#decor9'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure8"
+				},
+				{
+				"tag": "<svg class='icon-decor10'><use xlink:href='#decor10'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure9"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor11'><use xlink:href='#decor11'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure10"
+				}, 
+				{
+				"tag": "<svg class='icon-decor12'><use xlink:href='#decor12'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure11"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor13'><use xlink:href='#decor13'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure12"
+				},
+				{ 
+				"tag": "<svg class='icon-decor14'><use xlink:href='#decor14'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure13"
+				},
+				{
+				"tag": "<svg class='icon-decor15'><use xlink:href='#decor15'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure14"
+				},
+				{
+				"tag": "<svg class='icon-decor6'><use xlink:href='#decor6'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure15"
+				}
+			  ]
+			})
+   		</div>
+    	
+    </div>
+
+  @@include('src/modules/footer/footer.html')
+@@include('src/modules/popups/popups.html')
+@@include('src/modules/foot/foot.html')
+

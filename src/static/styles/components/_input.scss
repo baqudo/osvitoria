@@ -1,0 +1,66 @@
+	
+textarea,
+select,
+input {
+	background: none;
+	border: none;
+	border-bottom: 2px solid rgba($black, .4);
+	font-family: $mainFont;
+	color: $mainFontColor;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 5px 0 20px;
+	width: 100%; 
+	display: block;
+	transition: all .2s ease;
+	-webkit-appearance: none;
+	border-radius: 0;
+	@include placeholderColor(rgba($mainFontColor, .7));
+	background-position: 100% 5px;
+	background-repeat: no-repeat;
+	@include b(mobile) {
+		font-size: 14px;
+		line-height: 16px;
+		padding: 5px 0;
+	}
+	&:focus {
+		border-color: rgba($black, .9);
+	}
+	&.error {
+		border-color: $red;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiBpZD0iMGEyMzA3YWMtNTUyZC00OWQ3LTkyNDYtZTI0MmM5OWQ2Zjc5IiBkYXRhLW5hbWU9Indhcm5pbmciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIwLjU3IDIwLjU3Ij4NCiAgPHRpdGxlPndhcm5pbmc8L3RpdGxlPg0KICA8ZyBpZD0iMGZkZWRlZTItOTczZS00YjU4LWI4MjYtZTE2NGNmZjk4ZDc0IiBkYXRhLW5hbWU9IkVsbGlwc2UgMSI+DQogICAgPHBhdGggZD0iTTEwLjI5LDIwLjA3YTkuNzksOS43OSwwLDEsMSw5Ljc5LTkuNzlBOS44LDkuOCwwLDAsMSwxMC4yOSwyMC4wN1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIGZpbGw9IiNkMjIyNjQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPg0KICAgIDxwYXRoIGQ9Ik0xMC4yOSwxQTkuMjksOS4yOSwwLDEsMSwxLDEwLjI5LDkuMyw5LjMsMCwwLDEsMTAuMjksMW0wLTFBMTAuMjksMTAuMjksMCwxLDAsMjAuNTcsMTAuMjksMTAuMjksMTAuMjksMCwwLDAsMTAuMjksMGgwWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIgZmlsbD0iI2QyMjI2NCIvPg0KICA8L2c+DQogIDxnIGlkPSI0NmQ3YWIxNC02YTgxLTRmZWYtYTRmNC0zYzE0YzM0ZWVjNGMiIGRhdGEtbmFtZT0iISI+DQogICAgPHBhdGggZD0iTTkuNDEsMTYuMDdhMSwxLDAsMSwxLC43My4zQTEsMSwwLDAsMSw5LjQxLDE2LjA3Wk05LjM0LDUuMzNhMC44MSwwLjgxLDAsMCwxLDEuNjEsMHY2Ljc4YTAuODEsMC44MSwwLDAsMS0xLjYxLDBWNS4zM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiIGZpbGw9IiNmZmYiLz4NCiAgPC9nPg0KPC9zdmc+DQo=);
+		
+	}
+	&.disabled,
+	&[disabled="disabled"],
+	&[disabled] {
+		background-color: #f3f3f3;
+	}
+}
+
+textarea {
+	height: 105px;
+	resize: none;
+	@include b(mobile) {
+		height: 83px;
+	}
+}
+
+input[type="file"] {
+	display: none;
+	& + label {
+		display: block;
+		background: #fff;
+		font-size: 14px;
+		line-height: 24px;
+		padding: 25px 15px;
+		color: #969696;
+		text-align: center;
+		border: 1px dashed #c4c4c4;
+		transition: .2s ease-in-out;
+		&:hover {
+			border-color: #696969;
+			background: #e9e9e9;
+		}
+	}
+}

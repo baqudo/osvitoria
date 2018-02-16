@@ -1,0 +1,81 @@
+.footer {
+	text-align: center;
+	padding: 44px 0;
+	@include b(desktop-lg) {
+		padding: 30px 0;
+	}
+	@include b(mobile) {
+		padding: 20px 0;
+	}
+	&__inner {
+		display: table;
+		width: 100%;
+		@include b(mobile) {
+			display: flex;
+			flex-direction: column;
+		}
+		&-cell {
+			display: table-cell;
+			width: 33.33%;
+			text-align: center;
+			@include b(mobile) {
+				display: block;
+				width: auto;
+				order: 3;
+			}
+		}
+	}
+	&__copyright {
+		display: table-cell;
+		text-align: left;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 700;
+		color: #9c9c9f;
+		vertical-align: middle;
+		@include b(mobile) {
+			display: block;
+			text-align: center;
+			padding: 0 0 20px 0;
+			order: 1;
+		}
+	}
+	&__logo {
+		display: inline-block;
+		@include b(mobile) {
+			display: block;
+			text-align: center;
+			
+			order: 3;
+		}
+		[class*="icon-"] {
+			fill: #a6a6a6;
+		}
+	}
+	&__social {
+		font-size: 0;
+		line-height: 0;
+		text-align: right;
+		@include b(mobile) {
+			text-align: center;
+			order: 2;
+			padding: 0 0 20px 0;
+		}
+		&-link {
+			display: inline-block;
+			margin: 0 0 0 30px;
+			vertical-align: middle;
+			@include b(mobile) {
+				margin: 0 15px;
+			}
+			[class*="icon-"] {
+				fill: rgba($black, .35);
+			}
+			&:hover {
+				[class*="icon-"] {
+					fill: rgba($black, .8);
+				}
+			}
+		}
+	}
+}

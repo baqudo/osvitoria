@@ -1,0 +1,244 @@
+.team {
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 160px 0;
+	@include b(desktop-lg) {
+		padding: 0 0 95px 0;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: 3;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: calc(50% + 585px);
+		background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+		@include b(tablet) {
+			left: calc(100% - 60px);
+		}
+	}
+}
+
+.team-slider {
+	margin: 0 -15px;
+	position: relative;
+	@include b(mobile) {
+		margin: 0 -10px;
+	}
+	.slick-list {
+		overflow: visible;
+	}
+	&__item {
+		padding: 0 15px 40px;
+		@include b(desktop-lg) {
+		}
+		@include b(mobile) {
+			padding: 0 10px 20px;
+		}
+	}
+	&__controls {
+		width: 33.33%;
+		padding: 0 15px 0 0;
+		@include clearfix;
+		@include b(mobile) {
+			width: auto;
+			padding: 0;
+		}
+		.slick {
+			&-arrow {
+				display: block;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				border: 1px solid $green2;
+				font-size: 0;
+				line-height: 0;
+				text-align: center;
+				cursor: pointer;
+				
+				[class*="icon-"] {
+					fill: $green2;
+					vertical-align: middle;
+					
+				}
+				&:before {
+					content: '';
+					display: inline-block;
+					height: 100%;
+					vertical-align: middle;
+				}
+				&.slick-disabled {
+					opacity: .5;
+					cursor: default;
+				}
+				&:hover {
+					opacity: .7;
+				}
+				@include b(mobile) {
+					width: 40px;
+					height: 40px;
+					display: block;
+					background: rgba($black, .6);
+					border-radius: 50%;
+					position: absolute;
+					top: 260px;
+					border: none;
+					z-index: 4;
+					[class*="icon-"] {
+						fill: $white;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin: -4px 0 0 -9px;
+					}
+					&.slick-disabled {
+						display: none!important;
+						opacity: 1;
+					}
+				}
+			}
+			&-prev {
+				float: left;
+				@include b(mobile) {
+					float: none;
+					left: 20px;
+					display: none;
+				}
+			}
+			&-next {
+				float: right;
+				@include b(mobile) {
+					float: none;
+					right: 20px;
+				}
+			}
+			&-dots {
+				position: static;
+				font-size: 0;
+				line-height: 0;
+				text-align: center;
+				padding: 20px 60px;
+				@include b(mobile) {
+					padding: 0;
+				}
+				li {
+					padding: 0 0 0 5px;
+					&:first-child {
+						padding: 0;
+					}
+					margin: 0;
+					button {
+						font-size: 0;
+						line-height: 0;
+						padding: 0;
+						width: 10px;
+						height: 10px;
+						border: 3px solid rgba($yellow, .5);
+						border-radius: 50%;
+						background: $white;
+					}
+					&.slick-active {
+						button {
+							border-color: $green2;
+							background: $green2;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.team-box {
+	cursor: pointer;
+	transition: box-shadow .2s ease;
+	@include b(tablet) {
+		width: 235px;
+	}
+	&:hover, &.touched {
+		@media (min-width: 1024px) {
+			box-shadow: 0 10px 40px rgba(#364653, .16);
+			.team-box__img {
+				// &-def {
+				// 	opacity: 0;
+				// }
+				&-mod {
+					display: block!important;
+				}
+			}
+		}
+			
+	}
+	&.touched {
+		box-shadow: 0 10px 40px rgba(#364653, .16);
+		.team-box__img {
+			// &-def {
+			// 	// display: none;
+			// }
+			&-mod {
+				display: block!important;
+			}
+		}
+	}
+	&__img {
+		position: relative;
+		overflow: hidden;
+		&-def {
+			display: block;
+		}
+		&-mod {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: none!important;
+		}
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__caption {
+		text-align: center;
+		padding: 44px 20px;
+		@include b(desktop-lg) {
+			padding: 26px 30px 32px;
+		}
+		@include b(mobile) {
+			padding: 17px 20px;
+		}
+	}
+	&__title {
+		display: block;
+		font-size: 22px;
+		line-height: 24px;
+		font-weight: 700;
+		color: $default;
+		padding: 0 0 5px 0;
+		@include b(desktop-lg) {
+			padding: 0;
+		}
+		@include b(mobile) {
+			font-size: 18px;
+			line-height: 27px;
+		}
+	}
+	&__descr {
+		display: block;
+		font-size: 18px;
+		line-height: 30px;
+		color: $gray2;
+		@include b(desktop-lg) {
+			font-size: 16px;
+		}
+		@include b(mobile) {
+			font-size: 15px;
+			line-height: 21px;
+			
+		}
+	}
+}

@@ -1,0 +1,106 @@
+.news {
+	
+	&__list {
+		font-size: 0;
+		line-height: 0;
+		margin: 0 -35px;
+		padding: 0 0 115px 0;
+		@include b(desktop-lg) {
+			padding: 0 0 48px 0;
+		}
+		@include b(desktop) {
+			margin: 0 -10px;
+		}
+		@include b(mobile) {
+			margin: 0;
+		}
+		&-item {
+			display: inline-block;
+			font-size: $mainFontSize;
+			line-height: $mainFontHeight;
+			width: 50%;
+			padding: 0 35px 35px;
+			@include b(desktop) {
+				padding: 0 10px 25px;
+			}
+			@include b(mobile) {
+				display: block;
+				width: auto;
+				padding: 0 0 55px 0;
+			}
+		}
+	}
+}
+
+.news-block {
+	&__img {
+		height: 360px;
+		overflow: hidden;
+		border-radius: 3px;
+		margin: 0 0 44px 0;
+		
+		img {
+			display: block;
+			min-height: 100%;
+			min-width: 100%;
+		}
+		@include b(desktop-lg) {
+			margin: 0 0 25px 0;
+		}
+		@include b(mobile) {
+			height: auto;
+			margin: 0 -20px 15px;
+		}
+	}
+	&__date {
+		display: block;
+		font-size: 16px;
+		line-height: 20px;
+		color: rgba($default, .4);
+		text-transform: uppercase;
+		padding: 0 0 17px 0;
+		font-weight: 700;
+		@include b(desktop-lg) {
+			font-size: 14px;
+			color: rgba($default, .2);
+			padding: 0 0 3px 0;;
+		}
+		@include b(mobile) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	&__title {
+		display: block;
+		font-size: 24px;
+		line-height: 36px;
+		font-weight: 700;
+		padding: 0 0 11px 0;
+		@include b(desktop-lg) {
+			font-size: 22px;
+			line-height: 33px;
+			padding: 0 0 7px 0;
+		}
+		@include b(mobile) {
+			font-size: 18px;
+			line-height: 27px;
+		}
+	}
+	&__descr {
+		display: block;
+		font-size: 18px;
+		line-height: 30px;
+		color: rgba($black, .65);
+		padding: 0 0 36px 0;
+		@include b(desktop-lg) {
+			font-size: 16px;
+			line-height: 26px;
+			color: rgba($default, .4);
+			padding: 0 0 14px 0;
+		}
+		@include b(mobile) {
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+}

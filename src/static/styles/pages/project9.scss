@@ -1,0 +1,340 @@
+.project-info {
+	&__list {
+		padding: 62px 0 103px;
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+		margin: 0 -20px;
+		@include b(desktop-lg) {
+			padding: 20px 0 97px;
+		}
+		@include b(desktop) {
+			padding: 12px 0 86px;
+		}
+		@include b(mobile) {
+			padding: 10px 0 0 0;
+		}
+		&-item {
+			display: inline-block;
+			width: 33.33%;
+			padding: 0 20px;
+			vertical-align: top;
+			@include b(mobile) {
+				display: block;
+				width: auto;
+				padding: 0 20px 30px; 
+			}
+		}
+	}
+	&__count {
+		display: block;
+		font-size: 90px;
+		line-height: 96px;
+		padding: 0 0 8px 0;
+		font-weight: 700;
+		@include b(desktop-lg) {
+			font-size: 80px;
+			padding: 0 0 5px 0;
+		}
+		@include b(desktop) {
+			font-size: 70px;
+			line-height: 90px;
+		}
+		@include b(mobile) {
+			font-size: 70px;
+			line-height: 80px;
+			
+		}
+		&--orange {
+			color: $yellow;
+		}
+		&--green {
+			color: $green;
+		}
+		&--blue {
+			color: $blue;
+		}
+	}
+	&__descr {
+		display: block;
+		font-size: 22px;
+		line-height: 32px;
+		font-weight: 700;
+		color: $black;
+		@include b(mobile) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}
+
+.advant-list {
+	font-size: 0;
+	line-height: 0;
+	text-align: center;
+	margin: 0 -20px;
+	padding: 50px 0 70px;
+	@include b(desktop-lg) {
+		padding: 40px 0 80px;
+	}
+	@include b(mobile) {
+		padding: 15px 0 0 0;
+	}
+	&__item {
+		width: 25%;
+		padding: 0 20px;
+		display: inline-block;
+		vertical-align: top;
+		@include b(desktop-lg) {
+			.directions__list-icon {
+				width: 120px;
+				height: 120px;
+			}
+		}
+		@include b(mobile) {
+			display: block;
+			width: auto;
+			padding: 0 20px 30px;
+		}
+	}
+	&__icon {
+		display: block;
+		width: 120px;
+		height: 120px;
+		
+	}
+}
+
+.project-pic-slider {
+	padding: 0 0 80px 0;
+	max-width: 1030px;
+	margin: 0 auto;
+	@include b(desktop-lg) {
+		padding: 0 0 45px 0;
+		max-width: 770px;
+	}
+	@include b(desktop) {
+		max-width: 660px;
+	}
+	.slick {
+		
+	}
+	.slick {
+		&-arrow {
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 1px solid $green2;
+			font-size: 0;
+			line-height: 0;
+			text-align: center;
+			cursor: pointer;
+			position: absolute;
+			top: 50%;
+			margin-top: -65px;;
+			z-index: 1;
+			[class*="icon-"] {
+				fill: $green2;
+				vertical-align: middle;
+
+			}
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			&.slick-disabled {
+				opacity: .5;
+				cursor: default;
+			}
+			&:hover {
+				opacity: .8;
+			}
+		}
+		&-prev {
+			left: 30px;
+		}
+		&-next {
+			right: 30px;
+		}
+		&-dots {
+			position: static;
+			font-size: 0;
+			line-height: 0;
+			text-align: center;
+			padding: 30px 0 0 0;
+			@include b(desktop-lg) {
+				padding: 20px 0 0 0;
+			}
+			li {
+				padding: 0 0 0 5px;
+				&:first-child {
+					padding: 0;
+				}
+				margin: 0;
+				button {
+					font-size: 0;
+					line-height: 0;
+					padding: 0;
+					width: 10px;
+					height: 10px;
+					border: 3px solid rgba($yellow, .5);
+					border-radius: 50%;
+					background: $white;
+				}
+				&.slick-active {
+					button {
+						border-color: $green2;
+						background: $green2;
+					}
+				}
+			}
+		}
+		@include b(mobile) {
+			&-arrow {
+				display: block;
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				font-size: 0;
+				line-height: 0;
+				text-align: center;
+				cursor: pointer;
+				position: absolute;
+				top: 50%;
+				background: rgba($black, .6);
+				margin: -65px 0 0 0;
+				z-index: 2;
+				border: none;
+				[class*="icon-"] {
+					fill: $white;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					margin: -4px 0 0 -9px;
+				}
+
+			}
+			&-prev {
+				left: 20px;
+			}
+			&-next {
+				right: 20px;
+			}
+		}
+	}
+	@include b(mobile) {
+		margin: 0 -20px;
+	}
+	&__item {
+//		padding: 0 70px;
+		height: 600px;
+		overflow: hidden;
+		@include b(desktop-lg) {
+//			padding: 0 30px;
+			height: 470px;
+		}
+		@include b(desktop) {
+//			padding: 0 80px;
+			height: 420px;
+		}
+		@include b(mobile) {
+			padding: 0;
+			height: 250px;
+		}
+		img {
+			display: block;
+			height: 100%;
+			margin: 0 auto;
+		}
+	}
+	&__descr {
+		@include b(desktop-lg) {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		@include b(desktop) {
+			font-size: 17px;
+			line-height: 26px;
+		}
+		@include b(mobile) {
+			font-size: 14px;
+			line-height: 21px;
+		}
+	}
+}
+
+.other-projects {
+	@include clearfix;
+	padding: 80px 0 160px;
+	@include b(desktop-lg) {
+		padding: 50px 0 100px;
+	}
+	&__title {
+		display: block;
+		text-align: center;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 55px;
+		padding: 0 0 86px 0;
+		@include b(desktop-lg) {
+			font-size: 30px;
+			padding: 0 0 32px 0;
+		}
+		@include b(mobile) {
+			font-size: 26px;
+			line-height: 32px;
+			padding: 0 0 30px 0;
+		}
+	}
+	&__list {
+		margin: 0 -15px;
+		@include b(mobile) {
+			margin: 0 -20px;
+		}
+	}
+	&__item {
+		float: left;
+		width: 33.33%;
+		text-align: center;
+		padding: 0 15px;
+		@include b(mobile) {
+			float: none;
+			width: auto;
+			padding: 0 0 55px 0;;
+		}
+	}
+}
+
+.other-project {
+	display: block;
+	text-align: left;
+	img {
+		display: block;
+		width: 100%;
+		margin: 0 0 28px 0;;
+		@include b(desktop-lg) {
+			margin: 0 0 10px 0;
+		}
+	}
+	&__text {
+		display: block;
+		font-size: 28px;
+		line-height: 42px;
+		font-weight: 700;
+		color: $default;
+		@include b(desktop-lg) {
+			font-size: 26px;
+		}
+		@include b(desktop) {
+			font-size: 22px;
+		}
+		@include b(mobile) {
+			padding: 0 20px;
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+}

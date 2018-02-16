@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 56">
+  <defs>
+    <clipPath id="5de28390-ca41-4b52-bac0-fbb87a9563f5">
+      <path d="M18,0A17.76,17.76,0,0,0,0,17.49C0,34.21,18,56,18,56S36,34.21,36,17.49A17.76,17.76,0,0,0,18,0Zm0,27.17A9.59,9.59,0,0,1,8.28,17.7,9.59,9.59,0,0,1,18,8.25a9.59,9.59,0,0,1,9.72,9.45A9.59,9.59,0,0,1,18,27.15Z" fill="none"/>
+    </clipPath>
+  </defs>
+  <title>pin</title>
+  <g id="1b171f9b-87c4-4a12-8a47-db3a36f7cd2b" data-name="pin" style="isolation: isolate">
+    <g clip-path="url(#5de28390-ca41-4b52-bac0-fbb87a9563f5)">
+      <image id="2098ae93-277e-4d5f-96f3-2daae9f143d6" data-name="pin Изображение" width="36" height="56" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAA4CAYAAACVFFp4AAAACXBIWXMAAAsSAAALEgHS3X78AAAAVElEQVRYR+3OIREAIADAQEphiExJiPCOQ0y8m9hYe56fDAWvNSQNSUPSkDQkDUlD0pA0JA1JQ9KQNCQNSUPSkDQkDUlD0pA0JA1JQ9KQNCQNSUNyAZQyffEBh6YIAAAAAElFTkSuQmCC"/>
+    </g>
+  </g>
+</svg>

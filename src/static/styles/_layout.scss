@@ -1,0 +1,136 @@
+//----------------------------------------------------//
+// LAYOUT                                             //
+//----------------------------------------------------//
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	min-width: 320px;
+	position: relative;
+	&.overflow-hidden {
+		overflow: hidden;
+	}
+	&.compensate-for-scrollbar {
+		.go-top {
+			margin-right: 17px;
+			transition: none;
+		}
+		.header.fixed.visible {
+			right: 17px;
+			transition: none;
+		}
+	}
+}
+
+.container {
+	padding: 0 15px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto; 
+	@include clearfix;
+	@include b(desktop-lg) {
+		&--mod {
+			max-width: 870px;
+			padding: 0 15px;
+		}
+	}
+	@include b(desktop) {
+		padding: 0 42px;
+		&--mod {
+			padding: 0 15px;
+		}
+	}
+	@include b(tablet) {
+		padding: 0 20px;
+	}
+}
+
+$footerHeight: 242px; 
+ 
+.wrapper {
+	min-height: 100%;
+}
+
+.content {
+	position: relative;
+	padding: 162px 0 0 0;
+	&--page {
+		padding: 250px 0 0 0;
+		position: relative;
+		@include b(desktop-lg) {
+			padding: 225px 0 0 0;
+		}
+		@include b(desktop) {
+			padding: 130px 0 0 0;
+		}
+		@include b(mobile) {
+			padding: 100px 0 0 0;
+		}
+	}
+	@include b(desktop-lg) {
+		padding: 90px 0 0 0;
+	}
+	@include b(mobile) {
+		padding: 54px 0 0 0;
+	}
+	&-title {
+		display: block;
+		text-align: center;
+		font-size: 36px;
+		line-height: 40px;
+		font-weight: 700;
+		color: $default;
+		padding: 0 0 34px 0;
+		margin: 0 0 82px 0;;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			width: 50px;
+			height: 3px;
+			background: $green2;
+			border-radius: 3px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin: 0 0 0 -25px;
+		}
+		@include b(desktop-lg) {
+			font-size: 30px;
+			padding: 0 0 21px 0;
+			margin: 0 0 43px 0;;
+		}
+		@include b(mobile) {
+			font-size: 26px;
+			line-height: 28px;
+			margin: 0 0 27px 0;;
+		}
+	}
+}
+
+.page-title {
+	display: block;
+	font-size: 48px;
+	line-height: 71px;
+	font-weight: 700;
+	padding: 0 0 70px 0;
+	text-align: center;
+	@include b(desktop-lg) {
+		font-size: 42px;
+		line-height: 46px;
+		padding: 0 0 46px 0;
+	}
+	@include b(mobile) {
+		font-size: 26px;
+		line-height: 38px;
+		padding: 0 0 24px 0;
+	}
+}

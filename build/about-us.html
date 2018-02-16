@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@@title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <!-- @if NODE_ENV='production' -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- @endif -->
+</head>
+<body class="">
+	<script>
+	//for preloader
+	//document.body.classList.add("overflow-hidden");
+	function getScrollbarWidth() {
+	var outer = document.createElement("div");
+	outer.style.visibility = "hidden";
+	outer.style.width = "100px";
+	outer.style.msOverflowStyle = "scrollbar"; // needed for WinJS apps
+
+	document.body.appendChild(outer);
+
+	var widthNoScroll = outer.offsetWidth;
+	// force scrollbars
+	outer.style.overflow = "scroll";
+
+	// add innerdiv
+	var inner = document.createElement("div");
+	inner.style.width = "100%";
+	outer.appendChild(inner);        
+
+	var widthWithScroll = inner.offsetWidth;
+
+	// remove divs
+	outer.parentNode.removeChild(outer);
+
+	return widthNoScroll - widthWithScroll;
+	}
+	var scrollW = getScrollbarWidth();
+	document.body.style.paddingRight = scrollW + 'px';
+	document.body.className = "overflow-hidden";
+</script>
+
+
+<div id="preloader">
+	<div class="preloader-wrapper big active">
+	<div class="spinner-layer">
+	  <div class="circle-clipper left">
+		<div class="circle"></div>
+	  </div><div class="gap-patch">
+		<div class="circle"></div>
+	  </div><div class="circle-clipper right">
+		<div class="circle"></div>
+	  </div>
+	</div>
+  </div>
+</div>
+	<div style="height: 0; width: 0; position: absolute;overflow: hidden;" id="svg-sprite-container">
+ 		
+ 	</div> 
+
+    <div class="wrapper">
+    	
+    	<header class="header header--inner wow fadeInDown js-header" data-wow-delay=".2s" data-wow-duration=".7s">
+	<div class="container">
+		
+		<div class="header__top wow fadeInUp" data-wow-delay=".7s">
+			<div class="header__top-left"><a href="#" class="header__top-link"> info@osvitoria.org</a></div>
+			<div class="header__top-right">
+				<div class="header__lang">
+					<span class="header__lang-open js-header-lang-open">Укр<span class="hide">аїнська</span></span>
+					<ul class="header__lang-drop js-header-lang-drop">
+						<li class="header__lang-drop-item">
+							<a href="#" class="header__lang-drop-link">Eng<span class="hide">lish</span></a>
+						</li>
+					</ul> 
+				</div>
+				<div class="header__social">
+					<a href="#" class="header__social-link">
+						<svg class="icon-facebook">
+							<use xlink:href="#facebook"></use>
+						</svg>
+					</a>
+					<a href="#" class="header__social-link">
+						<svg class="icon-youtube">
+							<use xlink:href="#youtube"></use>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="header__panel">
+			<div class="header__burger js-open-nav">
+				<span class="line"></span>
+				<span class="line"></span>
+				<span class="line"></span>
+			</div>
+			<div class="header__logo-box">
+				<a href="#" class="header__logo">
+					<svg class="icon-logo">
+						<use xlink:href="#logo"></use>
+					</svg>
+				</a>
+			</div>
+			<div class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="1s">
+						<a href="#" class="header__nav-link active">Про нас</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="1.1s">
+						<a href="#" class="header__nav-link">Новини</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="1.2s">
+						<a href="#" class="header__nav-link ">Проекти</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="1.3s">
+						<a href="#" class="header__nav-link">Експертна рада</a>
+					</li>
+					<li class="header__nav-list-item wow fadeInUp" data-wow-delay="1.4s">
+						<a href="#" class="header__nav-link">Контакти</a>
+					</li>
+				</ul>
+			</div> 
+			<a href="#popup3" class="header__support-link" data-fancybox>підтримати нас</a>
+		</div>
+	</div>
+</header>
+<a href="#" class="like-link" data-fancybox data-src="#popup3">
+	<svg class="icon-like">
+		<use xlink:href="#like"></use>
+	</svg>
+</a>
+   		
+   		<div class="content--page">
+   		
+   			<section class="about-us-page">
+	<div class="container container--mod">
+		<span class="page-title wow fadeInLeft">Про нас</span>
+		<p>Освіторія - це неприбуткова громадська спілка, яка допомагає змінювати і розвивати освіту в Україні. Ми створюємо інноваційні школи і програми, допомагаємо вчителям навчатись та надаємо доступ до якісної освіти малозабезпеченим дітям.</p>
+		<p>До заснування спілки ми робили власні благодійні та волонтерські проекти в освіті і створили приватну Новопечерську школу в Києві. Але чим більше проектів ми робили, тим більше бачили прогалин у системі освіти в Україні. Ми захотіли це змінити.</p>
+		<div class="about-us__photo">
+			<img src="pic/about-us-team.jpg" alt="">
+		</div>
+		<div class="about-us__blockquote">
+			Освіта - це найпотужніша зброя, аби змінити світ.
+			<span class="about-us__blockquote-author">- Нельсон Мандела </span>
+		</div>
+		<p>Ми вважаємо сферу освіти пріоритетною для України. Адже на рівні школи ми закладаємо в дітей не тільки знання, але і цінності. І від того, як ми навчаємо дітей зараз, залежить те, яку країну ми побачимо через 30-40 років. Це довгострокова, але найприбутковіша інвестиція.</p>
+		<p>Саме зараз є час і можливість для реформ. Одна команда, один міністр не може зрушити всю сферу, але з підтримкою суспільства, бізнесу, вчителів, батьків і дітей це можливо. Ми доводимо це нашими проектами. І ми впливаємо на майбутнє зараз.</p>
+	</div>
+</section>
+   			
+   			<section class="contacts" id="contacts">
+	<div class="contacts__left">
+		<div class="contacts__form">
+			<form action="#" class="js-contact-form">
+				<span class="contacts__form-subtitle">зв’яжіться з нами</span>
+				<span class="contacts__form-title">Маєте запитання або пропозицію щодо співпраці? Ми завжди вам раді і залюбки відповімо!</span>
+				<div class="contacts__form-emailbox">
+					<input type="email" placeholder="Ваша електронна адреса" class="error contacts__form-input">
+				</div>
+				<div class="contacts__form-inputbox">
+					<input type="text" placeholder="Тема" class="contacts__form-input">
+				</div>
+				<div class="contacts__form-textbox">
+					<textarea placeholder="Ваше повідомлення" class="contacts__form-input"></textarea>
+				</div>
+				<button class="btn btn--white btn--inline" data-fancybox data-src="#popup1">надіслати</button>
+			</form>
+		</div>
+	</div> 
+	<div class="contacts__right">
+		<div class="contacts__map" id="js-contact-map" data-lat="50.410044" data-lng="30.546623"></div>
+	</div>
+	
+</section>
+   			
+   			<div class="scene-container js-scene-container scene-container--visible">
+  <div class="scene-container__inner">
+    <ul class="scene js-scene">
+      
+        <li class="layer layer-figure layer-figure1" data-depth="0.10">
+  <svg class='icon-decor1'><use xlink:href='#decor1'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure2" data-depth="0.20">
+  <svg class='icon-decor2'><use xlink:href='#decor2'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure3" data-depth="0.10">
+  <svg class='icon-decor3'><use xlink:href='#decor3'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure4" data-depth="0.20">
+  <svg class='icon-decor4'><use xlink:href='#decor4'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure5" data-depth="0.10">
+  <svg class='icon-decor5'><use xlink:href='#decor5'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure6" data-depth="0.20">
+  <svg class='icon-decor7'><use xlink:href='#decor7'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure7" data-depth="0.10">
+  <svg class='icon-decor8'><use xlink:href='#decor8'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure8" data-depth="0.20">
+  <svg class='icon-decor9'><use xlink:href='#decor9'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure9" data-depth="0.10">
+  <svg class='icon-decor10'><use xlink:href='#decor10'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure10" data-depth="0.20">
+  <svg class='icon-decor11'><use xlink:href='#decor11'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure11" data-depth="0.10">
+  <svg class='icon-decor12'><use xlink:href='#decor12'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure12" data-depth="0.20">
+  <svg class='icon-decor13'><use xlink:href='#decor13'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure13" data-depth="0.10">
+  <svg class='icon-decor14'><use xlink:href='#decor14'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure14" data-depth="0.10">
+  <svg class='icon-decor15'><use xlink:href='#decor15'></use></svg>
+</li>
+      
+        <li class="layer layer-figure layer-figure15" data-depth="0.10">
+  <svg class='icon-decor6'><use xlink:href='#decor6'></use></svg>
+</li>
+      
+    </ul>
+  </div>
+</div>
+   		</div>
+    	
+    </div>
+
+  <a href="#" class="go-top js-go-top">
+	<svg class="icon-arrow-top">
+		<use xlink:href="#arrow"></use>
+	</svg>
+</a>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<span class="footer__inner-cell footer__copyright">© 2017 <a href="#">Освіторія</a></span>
+			<div class="footer__inner-cell">
+				<a href="#" class="footer__logo"><svg class="icon-logo-footer"><use xlink:href="#logo-footer"></use></svg></a>
+			</div>
+			<ul class="footer__inner-cell footer__social">
+				<a href="https://www.facebook.com/osvitoria.media/" class="footer__social-link">
+					<svg class="icon-facebook">
+						<use xlink:href="#facebook"></use>
+					</svg>
+				</a>
+				<a href="https://www.youtube.com/channel/UCz3iBih-MsBlBvhIgkHuRzQ/videos?sort=dd&view=0&shelf_id=0" class="footer__social-link">
+					<svg class="icon-youtube">
+						<use xlink:href="#youtube"></use>
+					</svg>
+				</a>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<div class="popup" id="popup1">
+	<div class="popup__caption">
+		<span class="popup__icon">
+			<svg class="icon-checked">
+				<use xlink:href="#checked"></use>
+			</svg>
+		</span>
+		<span class="popup__title">Дякуємо вам за звернення!</span>
+		<span class="popup__descr">Найближчим часом ми вам відповімо.</span>
+	</div>
+</div>
+<div class="popup" id="popup2">
+	<div class="popup__caption">
+		<span class="popup__icon">
+			<svg class="icon-checked">
+				<use xlink:href="#checked"></use>
+			</svg>
+		</span>
+		<span class="popup__title">Дякуємо вам за підтримку!</span>
+	</div>
+</div>
+<div class="popup" id="popup3">
+	<div class="popup__caption">
+		<span class="popup__title">Підтримати нас</span>
+		<span class="popup__descr">Маєте бажання підтримати Освіторію та допомогти нам й надалі продовжувати розвиток та реформування освіти в Україні? Натисніть кнопку, що знаходиться нижче і дотримуйтесь подальших інструкцій. Дякуємо!</span>
+		<a href="#" class="btn btn--inline" data-fancybox data-src="#popup2">підтримати</a>
+	</div>
+</div>
+		
+
+    <script src="js/vendor.js"></script>
+
+    
+    
+    <script src="js/main.js"></script>
+
+
+    
+
+    
+</body>
+</html>
+
+

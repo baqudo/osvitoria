@@ -1,0 +1,15 @@
+<div class="container">
+	<span class="page-title">Проекти</span>
+	<ul class="projects-list">
+		@@for(var i = 0; i < arr.length; i++) {
+		<li class="projects-list__item">
+			@@include('src/modules/projects/projects-list-item.html', {
+				"img": "`+arr[i].img+`",
+				"title": "`+arr[i].title+`",
+				"info": "`+arr[i].info+`",
+				"group": "`+i+`"
+			})
+		</li>
+		}
+	</ul>
+</div>

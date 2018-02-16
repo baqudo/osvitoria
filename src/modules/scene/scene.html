@@ -1,0 +1,13 @@
+<div class="scene-container js-scene-container @@if(context.mod){@@mod}">
+  <div class="scene-container__inner">
+    <ul class="scene js-scene">
+      @@for (var i = 0; i < arr.length; i++) {
+        @@include('src/modules/scene/scene__item.html', {
+          "tag": "`+arr[i].tag+`",
+          "deth": "`+arr[i].deth+`",
+          "class": "`+arr[i].class+`"
+        })
+      }
+    </ul>
+  </div>
+</div>

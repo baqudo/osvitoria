@@ -1,0 +1,313 @@
+//----------------------------------------------------//
+// TYPOGRAPHY                                         //
+//----------------------------------------------------//
+* {
+	outline: none;
+}
+
+body {
+	background: #fff;
+  color: $mainFontColor;
+  font-family: $mainFont, $fixFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  line-height: $mainFontHeight;
+	@include b(desktop-lg) {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	@include b(mobile) {
+		font-size: 14px;
+		line-height: 21px;
+	}
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #4c4c4c;
+	font-family: $mainFont, $fixFont;
+	margin: 0;
+	padding: 0;
+	color: #000;
+}
+h1 {
+	font-size: 42px;
+	line-height: 48px;
+	font-weight: 700;
+}
+h2 {
+	font-size: 30px;
+	line-height: 38px;
+	font-weight: 200;
+}
+h3 {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+}
+h4 {
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 300;
+}
+h5 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 300;
+}
+h6 {
+	font-size: 12px;
+	line-height: 1.4;
+}
+
+p {
+	padding: 0 0 $mainFontHeight;  
+	margin: 0;
+	color: rgba($black, .7);
+	@include b(mobile) {
+		padding: 0 0 16px 0;
+	}
+}
+
+hr {
+	overflow: hidden;
+	height: 1px;
+	background: #e9e9e9;
+	border: 0;
+	margin: 32px 0;
+}
+
+q,
+blockquote {
+	text-align: center;
+	display: block;
+	font-style: italic;
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+a {	
+	color: $green2;
+	transition: all .2s ease;
+	text-decoration: none;
+	&.btn {
+		text-decoration: none;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+a:hover {
+	text-decoration: none; 
+	color: lighten($green2, 10%);
+}
+a:active {}
+a:visited {}
+
+[class*="icon-"] {
+	display: inline-block;
+	vertical-align: top;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+img[style*="float: left"],
+img[style*="float:left"],
+img[align="left"] {
+	margin: 0 20px 5px 0;
+}
+
+img[style*="float: right"],
+img[style*="float:right"],
+img[align="right"] {
+	margin: 0 0 5px 20px;
+}
+
+img {
+	border-radius: 2px;
+}
+
+.static-content {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0; 
+		li {
+			position: relative;
+			padding-left: 10px;
+			&:before {
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 10px;
+				width: 4px;
+				height: 4px;
+				background: pink;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+
+ol {
+	list-style-type: decimal;
+	list-style-position: inside;;
+	counter-reset: item;
+	li {
+		display: block;
+		position: relative;
+		&:before { 
+			content: counters(item, ".") ". ";
+			counter-increment: item;
+			display: inline;
+			vertical-align: top;
+			font-weight: 700;
+		}
+	}
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.link-arrow {
+	color: $green2;
+	transition: all .2s ease;
+	font-size: 16px;
+	font-weight: 700;
+	[class*="icon-"] {
+		fill: $green2;
+		vertical-align: middle;
+		position: relative;
+		top: -2px;
+		margin: 0 0 0 15px;
+		transition: all .2s ease;
+	}
+	&:hover {
+		color: $green2;
+		// letter-spacing: 1px;
+		[class*="icon-"] {
+			// margin: 0 0 0 40px;
+			transform: translateX(25px);
+		}
+	}
+}
+
+.go-top {
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	border-radius: 50%;
+	background: $green2;
+	bottom: 180px;
+	right: 72px;
+	z-index: 10;
+	transition: opacity .2s ease;
+	opacity: 0;
+	visibility: hidden;
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+	[class*="icon-"] {
+		fill: $white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -6px 0 0 -13px;
+	}
+	&:hover {
+		opacity: .8;
+	}
+	@include b(desktop) {
+		width: 50px;
+		height: 50px;
+		right: 42px;
+		bottom: 190px;
+	}
+	@include b(tablet) {
+		width: 40px;
+		height: 40px;
+		right: 20px;
+		bottom: 20px;
+		[class*="icon-"] {
+			width: 20px;
+			height: 10px;
+			margin: -5px 0 0 -10px;
+		}
+	}
+}
+
+.like-link {
+	position: fixed;
+	display: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: $blue;
+	bottom: 120px;
+	right: 42px;
+	z-index: 10;
+	
+	@include b(desktop) {
+		display: block;
+	}
+	
+	@include b(tablet) {
+		right: 20px;
+		bottom: 80px;
+		width: 40px;
+		height: 40px;
+	}
+	[class*="icon-"] { 
+		fill: $white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -8px 0 0 -8px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		z-index: -1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: 4px solid $blue;
+		border-radius: 50%;
+		animation:  pulsate 2s ease-out infinite;
+		animation-delay: 1.1s;
+		opacity: 0;
+	}
+}
+
+@keyframes pulsate {
+  0% {
+	  transform: scale(.1);
+	  opacity: 0;
+  }
+  50% {
+   	opacity: 1;
+  }
+  100% {
+   transform: scale(1.4);
+	  opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+	.slick-arrow {
+		display: none!important;
+	}
+}

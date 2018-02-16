@@ -1,0 +1,202 @@
+.contacts {
+	@include clearfix;
+	position: relative;
+	&__left {
+		width: 50%;
+		float: left;
+		background: $green2;
+		padding: 119px 15px 130px;
+		@include b(desktop-lg) {
+			padding: 67px 15px 70px;
+		}
+		@include b(tablet) {
+			float: none;
+			width: auto;
+		}
+		@include b(mobile) {
+			padding: 60px 20px;
+		}
+	}
+	&__right {
+		position: absolute;
+		right: 0;
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		@include b(tablet) {
+			position: relative;
+			left: 0;
+			width: auto;
+			height: 520px;
+		}
+		@include b(mobile) {
+			height: 320px;
+		}
+	}
+	&__form {
+		width: 570px;
+		max-width: 100%;
+		margin: 0 0 0 auto;
+		padding: 0 70px 0 0;
+		.btn {
+			letter-spacing: .6px;
+		}
+		@include b(desktop) {
+			padding: 0 55px 0 25px;
+		}
+		@include b(tablet) {
+			width: auto;
+			padding: 0;
+		}
+		@include b(mobile) {
+			.btn {
+				display: block;
+				width: 100%;
+			}
+		}
+		&-subtitle {
+			display: block;
+			font-size: 16px;
+			color: rgba($white, .4);
+			padding: 0 0 8px 0;
+			text-transform: uppercase;
+			@include b(desktop-lg) {
+				font-size: 14px;
+				line-height: 16px;
+				padding: 0 0 7px 0;
+			}
+			@include b(mobile) {
+				font-size: 14px;
+			}
+		}
+		&-title {
+			display: block;
+			font-size: 36px;
+			line-height: 55px;
+			color: $white;
+			font-weight: 700;
+			padding: 0 0 20px 0;
+			margin: 0 0 80px 0;
+			position: relative;
+			&:before {
+				content: '';
+				display: block;
+				width: 50px;
+				height: 3px;
+				border-radius: 3px;
+				background: $white;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+			@include b(desktop-lg) {
+				font-size: 30px;
+				line-height: 45px;
+				padding: 0 0 12px 0;
+				margin: 0 0 40px 0;
+			}
+			@include b(mobile) {
+				font-size: 26px;
+				line-height: 39px;
+			}
+		}
+		&-inputbox {
+			padding: 0 0 32px 0;
+			@include b(desktop-lg) {
+				padding: 0 0 30px 0;
+			}
+		}
+		&-emailbox {
+			padding: 0 0 43px 0;
+			@include b(desktop-lg) {
+				padding: 0 0 26px 0;
+			}
+			@include b(mobile) {
+				padding: 0 0 32px 0;
+			}
+		}
+		&-textbox {
+			padding: 0 0 50px 0;
+			@include b(desktop-lg) {
+				padding: 0 0 40px 0;
+			}
+		}
+		&-input {
+			color: rgba($white, .8);
+			border-color: rgba($white, .4);
+			@include placeholderColor(rgba($white, .7));
+			&:focus {
+				color: $white;
+				border-color: rgba($white, .9);
+			}
+		}
+	}
+	&__map {
+		width: 100%;
+		height: 100%;
+		&-baloon {
+			font-family: $mainFont;
+			width: 360px!important;
+			background: $white;
+			padding: 24px 25px 20px;
+//			margin: 0 0 100px -180px;
+			border-radius: 3px;
+			box-shadow: 0 0 24px rgba($black, .07);
+			@include b(mobile) {
+				padding: 15px;
+				width: 280px!important;
+//				margin: 0 0 50px -140px;;
+			}
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				border-top: 10px solid $white;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				top: 100%;
+				left: 50%;
+				margin: 0 0 0 -10px;
+			}
+			&-title {
+				display: block;
+				font-size: 22px;
+				line-height: 24px;
+				font-weight: 700;
+				padding: 0 0 18px 0;
+				@include b(mobile) {
+					font-size: 18px;
+					line-height: 21px;
+					padding: 0 0 10px 0;
+				}
+			}
+			&-subtitle {
+				display: block;
+				font-size: 18px;
+				line-height: 20px;
+				color: rgba($default, .65);
+				font-weight: 700;
+				padding: 0 0 5px 0;
+				@include b(mobile) {
+					font-size: 14px;
+					line-height: 16px;
+					padding: 0 0 3px 0;
+				}
+			}
+			&-times {
+				display: block;
+				font-size: 18px;
+				line-height: 30px;
+				color: rgba($default, .65);
+				padding: 0 0 20px 0;
+				&:last-child {
+					padding: 0;
+				}
+				@include b(mobile) {
+					font-size: 14px;
+					line-height: 16px;
+				}
+			}
+		}
+	}
+}

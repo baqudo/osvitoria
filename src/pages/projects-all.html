@@ -1,0 +1,155 @@
+@@include('src/modules/head/head.html') 
+
+    <div class="wrapper">
+    	
+    	@@include('src/modules/header/header-inner.html', {
+    		"projects_page": "true"
+    	})
+   		
+   		<div class="content--page">
+   		
+   			@@include('src/modules/projects/projects-list.html', {
+   				"arr": [
+   					{
+   						"img": "pic/projects/projects-12.jpg",
+   						"title": "Новопечерська школа",
+   						"info": "Це сучасна українська школа з глобальним мисленням і українським серцем. Ми створили цю школу в 2014 році як пілот для подальшої реформи усієї системи середньої освіти в Україні."
+   					},
+   					{
+   						"img": "pic/projects/projects-3.jpg",
+   						"title": "UNIT Factory",
+   						"info": "UNIT Factory (Ukrainian National IT Factory)  єдиний в Україні безкоштовний навчальний заклад, який готує кваліфікованих ІТ-фахівців за стандартами інноваційної французької Школи 42. "
+   					},
+   					{
+   						"img": "pic/projects/projects-4.jpg",
+   						"title": "Global Teacher Prize",
+   						"info": "Це світовий конкурс видатних вчителів, який ми привезли в Україну. На національному рівні ми обираємо людей, які зробили видатний внесок у професію, учнів і суспільство. Ми доводимо, що вчителі важливі, а їхні зусилля варті визнання."
+   					},
+   					{
+   						"img": "pic/projects/projects-5.jpg",
+   						"title": "Співпраця з МОН",
+   						"info": "Школа тренерів Нової Української Школи (НУШ)   це партнерський проект з Міністерством освіти України, що працює за сприянням Міжнародного фонду 'Відродження'."
+   					},
+   					{
+   						"img": "pic/projects/projects-6.jpg",
+   						"title": "Тренінговий центр — хаб Освіторія",
+   						"info": "Тренінги і курси для вчителів та дружніх громадських організацій в сфері освіти. Формуємо проактивну професійну спільноту, створюємо простір, куди можна прийти за готовим рішенням або реалізувати власний проект."
+   					},
+   					{
+   						"img": "pic/projects/projects-7.jpg",
+   						"title": "Освіторія медіа",
+   						"info": "Це цікаві і актуальні новини про сучасну освіту і історії про те, як змінювати систему навчання в будь-яких умовах і кожен день ставати кращою версією себе."
+   					},
+   					{
+   						"img": "pic/projects/projects-8.jpg",
+   						"title": "Перша професія",
+   						"info": "З 2010 року ми навчаємо дітей-сиріт 10-15 років першій професії, допомагаємо їм знайти себе і не боятися безробітного майбутнього за стінами інтернату. Це безкоштовні гуртки з напрямків «крій та шиття», «перукарська майстерність», «пошив та ремонт взуття», «кулінарія» та інші."
+   					},
+   					{
+   						"img": "pic/projects/projects-9.jpg",
+   						"title": "iLearn",
+   						"info": "Це відкрита платформа з онлайн-курсами для підготовки до ЗНО для всіх, хто цього потребує і бажає вчитися. Ми переконані, що доступ до освіти має бути рівним для всіх."
+   					},
+   					{
+   						"img": "pic/projects/projects-10.jpg",
+   						"title": "Програма розвитку социально-незахіщенної молоді",
+   						"info": "Це комплексна програма підтримки дітей зі шкіл-інтернатів, яку реалізуємо спільно з компанією Coca-Cola. Ми допомагаємо дітям обрати майбутню професію, заохочуємо їх до навчання, вчимо їх мріяти, оцінювати свої можливості та вірити у себе."
+   					},
+   					{
+   						"img": "pic/projects/projects-11.jpg",
+   						"title": "Профатлас",
+   						"info": "За допомогою експертів ми створюємо каталог нових професій і сфер економіки, які будуть затребувані в Україні та світі найближчі 15-20 років. Це зручний спосіб вибудовувати зрозумілий шлях підлітка до мрії та успіху в майбутній кар’єрі."
+   					}   					
+   				]
+   			})
+   			
+   			@@include('src/modules/contacts/contacts.html')
+   			
+   			@@include('src/modules/scene/scene.html',{
+			  "mod": "scene-container--visible",
+			  "arr":[
+				{
+				"tag": "<svg class='icon-decor1'><use xlink:href='#decor1'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure1"
+				},
+				{
+				"tag": "<svg class='icon-decor2'><use xlink:href='#decor2'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure2"
+				},
+				{
+				"tag": "<svg class='icon-decor3'><use xlink:href='#decor3'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure3"
+				},
+				{
+				"tag": "<svg class='icon-decor4'><use xlink:href='#decor4'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure4"
+				},
+				{ 
+				"tag": "<svg class='icon-decor5'><use xlink:href='#decor5'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure5"
+				},
+				{
+				"tag": "<svg class='icon-decor7'><use xlink:href='#decor7'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure6"
+				},
+				{
+				"tag": "<svg class='icon-decor8'><use xlink:href='#decor8'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure7" 
+				},
+				{
+				"tag": "<svg class='icon-decor9'><use xlink:href='#decor9'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure8"
+				},
+				{
+				"tag": "<svg class='icon-decor10'><use xlink:href='#decor10'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure9"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor11'><use xlink:href='#decor11'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure10"
+				}, 
+				{
+				"tag": "<svg class='icon-decor12'><use xlink:href='#decor12'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure11"
+				}, 
+				{ 
+				"tag": "<svg class='icon-decor13'><use xlink:href='#decor13'></use></svg>",
+				"deth": "0.20",
+				"class": "layer-figure layer-figure12"
+				},
+				{ 
+				"tag": "<svg class='icon-decor14'><use xlink:href='#decor14'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure13"
+				},
+				{
+				"tag": "<svg class='icon-decor15'><use xlink:href='#decor15'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure14"
+				},
+				{
+				"tag": "<svg class='icon-decor6'><use xlink:href='#decor6'></use></svg>",
+				"deth": "0.10",
+				"class": "layer-figure layer-figure15"
+				}
+			  ]
+			})
+   		</div>
+    	
+    </div>
+
+  @@include('src/modules/footer/footer.html')
+@@include('src/modules/popups/popups.html')
+@@include('src/modules/foot/foot.html')
+

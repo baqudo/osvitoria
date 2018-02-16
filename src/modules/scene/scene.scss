@@ -1,0 +1,99 @@
+.scene-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+	height: 100%;
+  @include b(mobile) {
+   display: none;
+  }
+  &__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+	  width: 100%;
+    height: 100%;
+  }
+  .scene {
+    height: 100%;
+  }
+  .layer {
+	position: absolute !important;
+	  [class*="icon-"] {
+		  display: block;
+		  width: 60px;
+		  height: 60px;
+		  opacity: .3;
+	  }
+	  &-figure1 {
+		  // top: 1.4%!important;
+		  top: calc(80/5858*100%) !important;
+		  // left: 20%!important;
+		  left: calc(391/1920*100%) !important;
+	  }
+	   &-figure2 {
+		  top: 3.2%!important;
+		  // top: calc(80/5858*100%) !important;
+		  left: 70%!important;
+	  }
+	   &-figure3 {
+		  top: 7.6%!important;
+		  left: 4.3%!important;
+	  }
+	   &-figure4 {
+		  top: 10.6%!important;
+		  left: 88%!important;
+	  }
+	   &-figure5 {
+		  top: 18.9%!important;
+		  left: 22.4%!important;
+	  }
+	   &-figure6 {
+		  top: 19.6%!important;
+		  left: 80%!important;
+	  }
+	   &-figure7 {
+		  top: 23%!important;
+		  left: 8%!important;
+	  }
+	   &-figure8{
+		  top: 30%!important;
+		  left: 33%!important;
+	  }
+	   &-figure9 {
+		  top: 37%!important;
+		  left: 4%!important;
+	  }
+	   &-figure10 {
+		  top: 43%!important;
+		  left: 76%!important;
+	  }
+	   &-figure11 {
+		  top: 59%!important;
+		  left: 62%!important;
+	  }
+	   &-figure12 {
+		  top: 66%!important;
+		  left: 11%!important;
+	  }
+	   &-figure13 {
+		  top: 72%!important;
+		  left: 92%!important;
+	  }
+	   &-figure14 {
+		  top: 74.5%!important;
+		  left: 39%!important;
+	  }
+	   &-figure15 {
+		  top: 77%!important;
+		  left: 7%!important;
+	  }
+	   &-figure16 {
+		  top: 1.4%!important;
+		  left: 20%!important;
+	  }
+  }
+}

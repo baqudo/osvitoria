@@ -1,0 +1,110 @@
+.directions {
+	padding: 0 0 159px 0;
+	@include b(desktop-lg) {
+		padding: 0 0 83px 0;
+	}
+	@include b(mobile) {
+		padding: 0 0 60px 0;
+	}
+	&__list {
+		@include clearfix;
+		&-item {
+			float: left;
+			width: 33.33%;
+			text-align: center;
+			@include b(desktop) {
+				padding: 0 10px;
+			}
+			@include b(mobile) {
+				float: none;
+				width: 100%;
+				padding: 0 0 30px 0;
+			}
+		}
+		&-block {
+			max-width: 280px;
+			margin: 0 auto;
+			
+			@include b(desktop-lg) {
+				max-width: 340px;
+			}
+			
+		}
+		&-icon {
+			display: block;
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			font-size: 0;
+			line-height: 0;
+			margin: 0 auto 20px;
+			border: 1px solid transparent;
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			[class*="icon-"] {
+				vertical-align: middle;
+			}
+			@include b(desktop-lg) {
+				width: 100px;
+				height: 100px;
+				margin: 0 auto 23px;
+			}
+			@include b(mobile) {
+				margin: 0 auto 15px;
+			}
+			&--yellow {
+				border-color: $yellow;
+				[class*="icon-"] {
+					fill: $yellow;
+				}
+			}
+			&--blue {
+				border-color: $blue;
+				[class*="icon-"] {
+					fill: $blue
+				}
+			}
+			&--green {
+				border-color: $green2;
+				[class*="icon-"] {
+					fill: $green2;
+				}
+			}
+		}
+		&-title {
+			display: block;
+			font-size: 22px;
+			line-height: 30px;
+			font-weight: 700;
+			padding: 0 0 20px 0;
+			span {
+				display: block;
+			}
+			@include b(desktop-lg) {
+				padding: 0 0 9px 0;
+			}
+			@include b(mobile) {
+				font-size: 18px;
+				line-height: 27px;
+			}
+		}
+		&-descr {
+			display: block;
+			font-size: 18px;
+			line-height: 28px;
+			color: rgba($default, .65);
+			@include b(desktop-lg) {
+				font-size: 16px;
+				line-height: 26px;
+			}
+			@include b(mobile) {
+				font-size: 14px;
+				line-height: 21px;
+			}
+		}
+	}
+}
