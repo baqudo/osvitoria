@@ -2,7 +2,24 @@
 	padding: 0 0 80px 0;
 	overflow: hidden;
 }
+#gesture-area1 {
+	padding: 20px;
+	background-color: #cccfff;
+	margin-bottom: 100px;
+}
 
+#scale-element1 {
+	display: block;
+	max-width: 100%;
+	margin: auto;
+	min-width: 100px;
+	min-height: 100px;
+	background-color: orange;
+}
+#scale-element1.reset {
+	transition: -webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out;
+}
 .good-map {
 	position: relative;
 	width: 100%;
@@ -16,7 +33,7 @@
 		padding-bottom: 67.7%;
 	}
 	@include b(mobile) {
-		width: 780px;
+		// width: 780px;
 		transform: translate(0);
 	}
 	&__wrapper {

@@ -29,6 +29,7 @@
     "gulp-watch": "^4.3.9",
     "gulp.spritesmith": "^6.3.0",
     "imagemin-pngquant": "5.0.0",
+    "jquery.panzoom": "^3.2.2",
     "path": "^0.12.7"
   }
 }
