@@ -11,6 +11,8 @@
 //---------------------------------------//
 
 //= require jquery.panzoom/dist/jquery.panzoom.min.js
+//= require zoom-it/zoom.js
+//= require hammerjs/hammer.js
 
 //---------------------------------------//
 // Подключаем плагины, которые в папке ( plugins )
