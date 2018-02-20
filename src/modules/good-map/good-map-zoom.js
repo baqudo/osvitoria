@@ -5,11 +5,11 @@
 		$pinClass = 'good-map__pin';
 
 	let elem = document.getElementById('torotate');
-	let elemW = $(elem).width();
-	let elemH = $(elem).height();
-
-	hammerIt(elem, elemW, elemH);
-
+	let elemW = 780;
+	let elemH = elemW * 0.67;
+	if (window.innerWidth < 768) {
+		hammerIt(elem, elemW, elemH);
+	}
 })();
 
 function hammerIt(elm, max_x = 0, max_y = 0) {
@@ -26,12 +26,7 @@ function hammerIt(elm, max_x = 0, max_y = 0) {
 		max_pos_x = max_x/2,
 		max_pos_y = max_y/2,
 		transform = "",
-		el = elm,
-		currentScroll = 0;
-
-	hammertime.on("panstart", function (ev) {
-		currentScroll = window.scrollY;
-	});
+		el = elm;
 
 	hammertime.on('doubletap pan pinch panend pinchend', function(ev) {
 		if (ev.type == "doubletap") {
@@ -86,12 +81,15 @@ function hammerIt(elm, max_x = 0, max_y = 0) {
 		}
 
 		if (scale != 1) {
+			hammertime.set({touchAction: "none"});
 			transform =
 				"translate3d(" + posX + "px," + posY + "px, 0) " +
 				"scale3d(" + scale + ", " + scale + ", 1)";
-			hammertime.set({touchAction: "none"})
+			
 		} else {
-			hammertime.set({touchAction: "pan-y"})
+			transform =
+				"translate3d(" + posX + "px," + posY + "px, 0) " +
+			hammertime.set({touchAction: "pan-y"});
 		}
 
 		if (transform) {
